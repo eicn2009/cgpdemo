@@ -1,0 +1,63 @@
+banner:
+  location: boot.txt
+server:
+  port: 1111
+  contextPath: /cgpdemo
+spring:
+  ds_mysql_a:
+    url: jdbc:mysql://192.168.125.55:3306/mokodb?useUnicode=true&characterEncoding=UTF-8
+    driverClassName: com.mysql.jdbc.Driver
+    username: test
+    password: test
+    initialSize: 10
+    max-active: 350
+    max-idle: 250
+    min-idle: 90
+    validation-query: SELECT 1
+    validationInterval: 30000
+    removeAbandoned: true
+    removeAbandonedTimeout: 55
+    testOnBorrow: true
+    logAbandoned: true
+  ds_mysql_b:
+    url: jdbc:mysql://192.168.125.55:3306/mokodb?useUnicode=true&characterEncoding=UTF-8
+    driverClassName: com.mysql.jdbc.Driver
+    username: test
+    password: test
+    initialSize: 10
+    max-active: 350
+    max-idle: 250
+    min-idle: 90
+    validation-query: SELECT 1
+    validationInterval: 30000
+    removeAbandoned: true
+    removeAbandonedTimeout: 55
+    testOnBorrow: true
+    logAbandoned: true
+  ds_sqlite:
+    #url: jdbc:sqlite:timeDB.sqlite
+    url: jdbc:sqlite:/Users/cgp/worksapcemoko/cgpdemo/src/main/resources/timeDB.sqlite
+    driverClassName: org.sqlite.JDBC
+
+thrift: #thrift客户端配置
+  client: 
+    host: 127.0.0.1
+    port: 9090  
+    connectTimeout: 3000     
+    maxConnectionPerServer: 2
+    minConnectionPerServer: 1
+    idleMaxAge: 2
+    maxConnectionAge: 2
+    acquireIncrement: 2
+    acquireRetryDelay: 2000
+    idleConnectionTestPeriod: 0
+    acquireRetryAttempts: 100
+    maxConnectionCreateFailedCount: 1
+    connectionTimeoutInMs: 5000 
+logging:
+  level:
+    org:
+      springframework: info
+config:
+  test:
+    value1: sdfsffs
