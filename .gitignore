@@ -1,2 +1,5 @@
 /.apt_generated/
 /target/
+/.springBeans
+/.factorypath
+/.DS_Store
