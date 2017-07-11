@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var global = "global";
+function fun1(){
+	console.log("this is a global val! : " + global);
+	global = "it is not local";
+	console.log("this is a global val! : " + global);
+}
+function fun2(){
+	console.log("this is a global val! : " + global);
+	var global = "it is local";
+	console.log("this is a global val! : " + global);
+}
+
+
+fun1();
+fun2();
+
+function fun3(){
+	infun = "it is defined without var!"
+	console.log(infun);
+}
+fun3();
+var infun;
+console.log(infun);
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -6,6 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Refresh" content="60">
 <title>html5/formField</title>
+<link href="/common/css/bootstrap.css" rel="stylesheet">
+
+<script src="/common/js/jquery-3.2.1.js"></script>
+<script src="/common/js/jquery-migrate-3.0.0.js"></script>
+<script src="/common/js/datetime.js"></script>
+<script src="/common/js/bootstrap.js"></script>
 </head>
 <body>
 

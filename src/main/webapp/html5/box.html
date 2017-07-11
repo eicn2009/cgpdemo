@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  span{background:#F60;}
+</style>
+</head>
+<body>
+
+<div><span>&#x0020;&#x000D;&#x000A;&#x000D;&#x000A;before</span></div>
+<div><span>&#x000D;&#x0020;&#x000A;&#x000D;&#x0020;&#x000A;before</span></div>
+<div><span>after&#x000A;&#x000D;&#x000A;</span></div>
+<div><span>after&#x000A;&#x000D;</span></div>
+<div><span>after&#x000A;&#x0020;</span></div>
+<div><span>one&#x000A;&#x0020;two</span></div>
+<div><span>one&#x000A;&#x0020;&#x000D;&#x000A;&#x0020;two</span></div>
+<div><span>&#x0009;&#x0020;&#x000C;&#x000D;&#x000A;</span></div>
+<div style="overflow: auto;width: 100%;">
+    <div style="float: left;width: 100%;">
+        <div style="margin-bottom: 30px;width: 100px;height: 100px;background-color: #cccccc;"></div>
+    </div>
+    <div style="float: left;width: 100%;">
+        <div style="margin-top: 50px;width: 100px;height: 100px;background-color: #333333;"></div>
+    </div>
+</div>
+</body>
+</html>
