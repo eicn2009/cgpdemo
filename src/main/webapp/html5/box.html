@@ -4,12 +4,24 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
+  #spanid{background:#ccc;}
   span{background:#F60;}
+*{
+border: 1px solid grey;
+}
+  
 </style>
 </head>
 <body>
 
-<div><span>&#x0020;&#x000D;&#x000A;&#x000D;&#x000A;before</span></div>
+<div style="height:6em;">
+	<p style="height:50%">this is a p</p>
+</div>
+<p style="border: 3px;margin-bottom: 10px"> the next p</p>
+<div style="height:6em;">
+	<div style="height:50%">this is a div</div>
+</div>
+<div><span id="spanid">&#x0020;&#x000D;&#x000A;&#x000D;&#x000A;before</span></div>
 <div><span>&#x000D;&#x0020;&#x000A;&#x000D;&#x0020;&#x000A;before</span></div>
 <div><span>after&#x000A;&#x000D;&#x000A;</span></div>
 <div><span>after&#x000A;&#x000D;</span></div>
