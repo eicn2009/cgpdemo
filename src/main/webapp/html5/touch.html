@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Insert title here</title>
+<script src="/common/js/jquery-3.2.1.js"></script>
+<script src="/common/js/jquery-migrate-3.0.0.js"></script>
+<style>
+body{
+margin:0;
+}
+</style>
+</head>
+<body >
+<!-- <div id="inp" style="width:20vw;height:20vw;border: 1px solid;"> -->
+
+<!-- </div> -->
+<div style="width:0;height:0;"></div>
+<div id="objid" style="width:100vw;height:100vh;background-color: gray;">
+	<div id="ballid" style="position:absolute;top:0;left:0; width:20vw;height:20vw;background-color: blue;border-radius: 15vw;margin:0 auto;text-align: center;line-height: 30vw;vertical-align: middle;"><span style="">这是一个圆</span></div>
+</div>
+<script type="text/javascript">
+var obj = document.getElementById('objid');
+var ball = document.getElementById('ballid');
+obj.addEventListener('touchmove', function(event) {  
+     // 如果这个元素的位置内只有一个手指的话  
+    if (event.targetTouches.length == 1) {  
+　　　　 event.preventDefault();// 阻止浏览器默认事件，重要   
+        var touch = event.targetTouches[0];  
+        // 把元素放在手指所在的位置  
+//         ball.style.left = touch.pageX-50 + 'px';  
+//         ball.style.top = touch.pageY-50 + 'px';  
+        console.log("touch.pageX:"+touch.pageX + " --- obj.style.left:"+obj.style.left);
+        console.log("touch.pageY:"+touch.pageY+ " --- obj.style.top:"+obj.style.top);
+        
+        }  
+}, false);
+
+
+function load (){  
+   
+    document.addEventListener('touchstart',touch, false);  
+    document.addEventListener('touchmove',touch, false);  
+    document.addEventListener('touchend',touch, false);  
+       
+    function touch (event){  
+        var event = event || window.event;  
+           
+        var oInp = document.getElementById("inp");  
+   
+        switch(event.type){  
+            case "touchstart":  
+                oInp.innerHTML = "Touch started (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";  
+                break;  
+            case "touchend":  
+                oInp.innerHTML = "<br>Touch end (" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY + ")";  
+                break;  
+            case "touchmove":  
+                event.preventDefault();  
+                oInp.innerHTML = "<br>Touch moved (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";  
+                break;  
+        }  
+           
+    }  
+}  
+// window.addEventListener('load',load, false);
+</script>
+</body>
+</html>
