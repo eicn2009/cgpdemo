@@ -2,4 +2,6 @@
 /target/
 /.springBeans
 /.factorypath
-/.DS_Store
+**/.DS_Store
+**/.settings
+
